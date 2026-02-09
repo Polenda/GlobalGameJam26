@@ -51,7 +51,7 @@ public class PLayerMOvement : MonoBehaviour
 			}
 
 			shakeTimer += Time.deltaTime;
-			if (shakeTimer >= 1f) // less frequent shake
+			if (shakeTimer >= 0.8f) // less frequent shake
 			{
 				shakeTimer = 0f;
 				shakeTimeRemaining = 0.15f; // slightly longer shake

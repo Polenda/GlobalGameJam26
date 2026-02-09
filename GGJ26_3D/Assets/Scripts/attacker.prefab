@@ -296,7 +296,7 @@ MonoBehaviour:
   gameBehaviors: {fileID: 0}
   lockX: 1
   lockZ: 1
-  Collectable: {fileID: 0}
+  Collectable: {fileID: 7043524612209161556, guid: 654dbb9e6dd0a5d4b94e6e63e782cf43, type: 3}
 --- !u!54 &-1873789162235905111
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -320,7 +320,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0

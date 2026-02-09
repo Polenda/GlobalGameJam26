@@ -126,14 +126,10 @@ public class KnightBehavior : MonoBehaviour
         transform.rotation = endRot;
         transform.position = endPos;
         // Generate random number 1-10
-        int randNum = Random.Range(1, 3);
-        Debug.Log($"Knight DEAD. Random number: {randNum}");
-        if (randNum == 1)
-        {
             // Spawn attacker prefab at knight position
-            Vector3 spawnPos = transform.position + Vector3.up * 1.5f;
-            Instantiate(Collectable, spawnPos, Quaternion.identity);
-            Debug.Log("Spawned new Attacker from dead Knight.");
-        }
+        Vector3 spawnPos = transform.position + Vector3.up * 1.5f;
+        Instantiate(Collectable, spawnPos, Quaternion.identity);
+        Debug.Log("Spawned new Attacker from dead Knight.");
+
     }
 }
