@@ -1741,11 +1741,30 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Before the sky was torn from this realm., every god felt this presence
-    older than stars.\n\nA will so vast that the very Earths' face was torn off from
-    its arrival.\n\nNot out of obedience, but out of instinctive terror of \n\nThe
-    Masked God. \n\nFor he did not descend to merely take more faces. \n\nReality
-    had simply failed to keep him entertained with the previous ones."
+  m_text: 'Before the sky was torn from this realm, every god felt a presence older
+    than stars.
+
+    A will so vast that the Earth itself seemed to recoil, its
+    very face shuddering beneath the weight of his arrival.
+
+    Not out of obedience,
+    but out of instinctive terror of
+
+    The Masked God.
+
+    For He did not descend
+    to merely claim new identities.
+
+    Reality had simply failed to keep Him entertained
+    with the previous ones.
+
+    And when a mortal kingdom dared to laugh of his
+    existance as if he were nothing more than a wandering myth
+
+    their defiance
+    rippled across creation like an insult carved into the bones of the world.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2c0c6cecdb5bd484aa2934f825080a99, type: 2}
   m_sharedMaterial: {fileID: -8842339291543156769, guid: 2c0c6cecdb5bd484aa2934f825080a99, type: 2}
