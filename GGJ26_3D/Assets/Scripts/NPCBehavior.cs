@@ -14,7 +14,6 @@ public class NPCBehavior : MonoBehaviour
     public Sprite deadSprite;
     [SerializeField] private bool DEAD = false;
     [SerializeField] private GameBehaviors gameBehaviors;
-    private Rigidbody rb;
 
     private void Awake()
     {
@@ -49,6 +48,11 @@ public class NPCBehavior : MonoBehaviour
     private IEnumerator DieSequence()
     {
         DEAD = true;
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = true;
+        }
         gameBehaviors.peasentScore += 1;
         if (spriteRenderer != null && deadSprite != null)
             spriteRenderer.sprite = deadSprite;
@@ -63,7 +67,7 @@ public class NPCBehavior : MonoBehaviour
         Quaternion startRot = transform.rotation;
         Quaternion endRot = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(90, 0, 0));
         Vector3 startPos = transform.position;
-        Vector3 endPos = startPos + new Vector3(0, -1f, 0);
+        Vector3 endPos = startPos + new Vector3(0, -0.95f, 0);
         while (elapsed < duration)
         {
             float t = elapsed / duration;

@@ -9,8 +9,7 @@ public class Collectable : MonoBehaviour
     [SerializeField] private bool lockZ;
     [SerializeField] private GameBehaviors gameBehaviors;
 
-
-    private void Awake()
+    private void OnEnable()
     {
         originalRotation = transform.rotation.eulerAngles;
         gameBehaviors = FindFirstObjectByType<GameBehaviors>();

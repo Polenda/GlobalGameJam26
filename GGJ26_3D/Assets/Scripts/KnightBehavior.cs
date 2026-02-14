@@ -100,6 +100,7 @@ public class KnightBehavior : MonoBehaviour
     private IEnumerator DieSequence()
     {
         DEAD = true;
+        
         gameBehaviors.knightScore += 1;
         if (spriteRenderer != null && deadSprite != null)
             spriteRenderer.sprite = deadSprite;
@@ -108,13 +109,19 @@ public class KnightBehavior : MonoBehaviour
             col.enabled = false;
         foreach (var col in GetComponentsInChildren<Collider>())
             col.enabled = false;
+        // Disable Rigidbody if present
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = true;
+        }
         // Linear rotate to fall down and lower by 1.5 in Y
         float elapsed = 0f;
         float duration = 1f;
         Quaternion startRot = transform.rotation;
         Quaternion endRot = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(90, 0, 0));
         Vector3 startPos = transform.position;
-        Vector3 endPos = startPos + new Vector3(0, -1.5f, 0);
+        Vector3 endPos = startPos + new Vector3(0, -1.45f, 0);
         while (elapsed < duration)
         {
             float t = elapsed / duration;
@@ -129,7 +136,7 @@ public class KnightBehavior : MonoBehaviour
             // Spawn attacker prefab at knight position
         Vector3 spawnPos = transform.position + Vector3.up * 1.5f;
         Instantiate(Collectable, spawnPos, Quaternion.identity);
-        Debug.Log("Spawned new Attacker from dead Knight.");
+        Debug.Log("Spawned face");
 
     }
 }

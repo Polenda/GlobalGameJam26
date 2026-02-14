@@ -13,6 +13,7 @@ public class GameBehaviors : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         // Only update mask score if this is the main menu scene
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "MainMenu")
         {
